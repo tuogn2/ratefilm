@@ -1,0 +1,13 @@
+.wrapper{
+    background-color: white;
+    border: none;
+    padding: 3px 64px 3px 24px;
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    &:hover{
+        background-color: #f8f9fa;
+    }
+}

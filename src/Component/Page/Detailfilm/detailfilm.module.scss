@@ -1,0 +1,30 @@
+.container{
+    // background-color: aqua;
+    height: 510px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 520px;
+    width: 100%;
+    z-index: -2;
+    // object-fit: cover;
+    // text-align: center;
+}
+
+.background::before{
+    content: " ";
+    height: 100%;
+    width: 100%;
+    background-color: rgb(17, 25, 22);
+    height: 520px;
+    width: 100%;
+    box-shadow: black;
+    z-index: -1;
+
+}

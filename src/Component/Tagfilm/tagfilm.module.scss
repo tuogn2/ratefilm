@@ -1,0 +1,49 @@
+.container-item {
+    background-color: #fff;
+    // border: 1px double black;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    width: 18%;
+    height: 320px;
+    display: inline-block;
+    direction: ltr;
+    margin: 5px;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0.1px solid orange;
+
+
+}
+
+
+
+.img {
+    height: 170px;
+    // display: inline-block;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: fill;
+}
+
+
+
+.title {
+    text-align: left;
+    // height: 200px;
+    // width: 100%;
+    padding-left: 4px;
+    position: absolute;
+    
+}
+.title span:hover{
+    color: #01b4e4;
+}
+
+
+
+
+.dateofilm ,.ratefilm span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    color: black;
+}
