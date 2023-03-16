@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import style from './Header.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect } from 'react';
+import React  from 'react';
 import Tippy from "@tippyjs/react/headless";
 import logo from '~/IMAGE/logo.png'
 import avatar from '~/IMAGE/avatar.jpg'
