@@ -4,6 +4,7 @@ import Film from "~/Component/Page/Film";
 import TypefilmLayout from "~/Component/Layout/TypefilmLayout";
 import routes from "~/config/router";
 import Detailfilm from "~/Component/Page/Detailfilm";
+import Filmsearch from "~/Component/Page/Filmsearch";
 const publicRoute=[
     {path:routes.home,component:Home},
     {path:routes.profile, component:Profile},
@@ -15,6 +16,8 @@ const publicRoute=[
     {path:routes.Now_Playingid,component:Detailfilm},
     {path:routes.Upcomingid,component:Detailfilm},
     {path:routes.top_ratedid,component:Detailfilm},
+    {path:routes.search,component:Filmsearch,Layout:TypefilmLayout},
+
  
 ]
 

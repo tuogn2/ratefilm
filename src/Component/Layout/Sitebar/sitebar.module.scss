@@ -15,14 +15,15 @@
     cursor: pointer;
     width: 250px;
     height: 44px;
-    background-color: #01b4e4;
+    // background-color: #01b4e4;
+    background: linear-gradient(to right, #1dd4ab 0%, #08bcd5 100%);
     border-radius: 20px;
     color: white;
     font-size: 20px;
     border: 1px solid #e3e3e3;
 
     &:active {
-        background-color: #627d85;
+        background: #032541;
     }
 }
 
@@ -65,4 +66,30 @@
     font-weight: 100;
     font-family: 'Montserrat', sans-serif;
     color: black;
+}
+
+
+@media only screen and (max-width: 739px) {
+    .wrapper-sitebar{
+        display: none;
+    }
+}
+
+//mt bangr
+@media only screen and (min-width:740px) and (max-width:1024px) {
+   .wrapper-sitebar{
+       width: 210px;
+   }
+   .btnsearch{
+    width: 110px;
+   }
+   .wrapper-box,.list{
+    width: auto;
+   }
+   .list-box{
+    width: auto;
+   }
+   option{
+    width: 10px;
+   }
 }

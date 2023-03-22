@@ -1,48 +1,48 @@
 import classNames from "classnames/bind";
 import style from './Header.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React  from 'react';
+import React from 'react';
 import Tippy from "@tippyjs/react/headless";
 import logo from '~/IMAGE/logo.png'
-import avatar from '~/IMAGE/avatar.jpg'
 import { faMagnifyingGlass, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 import routes from "~/config/router";
 
 import Type from "./Type";
 import { Link } from "react-router-dom";
+import Avatar from "./Avatar";
 const cx = classNames.bind(style);
 const More = [
-                { name: 'discustions', path: routes.home }, 
-                { name: 'Leaderboard', path: routes.home },
-                { name: 'Support', path: routes.home },
-                { name: 'API', path: routes.home },
-               ]
-             
+    { name: 'discustions', path: routes.home },
+    { name: 'Leaderboard', path: routes.home },
+    { name: 'Support', path: routes.home },
+    { name: 'API', path: routes.home },
+]
+
 const People = [
-                 { name: 'Popular People', path: routes.popular }, 
-                ]
+    { name: 'Popular People', path: routes.popular },
+]
 const TVshow = [
-                 { name: 'Popular', path: routes.popular }, 
-                 { name: 'Airing Today', path: routes.popular }, 
-                 { name: 'On TV', path: routes.popular }, 
-                 { name: 'Top Rated', path: routes.popular }, 
+    { name: 'Popular', path: routes.popular },
+    { name: 'Airing Today', path: routes.popular },
+    { name: 'On TV', path: routes.popular },
+    { name: 'Top Rated', path: routes.popular },
 
-                ]
+]
 const Movies = [
-                { name: 'Popular', path: routes.popular }, 
-                { name: 'Now Playing', path: routes.Now_Playing }, 
-                { name: 'Upcoming', path: routes.Upcoming }, 
-                { name: 'Top Rated', path: routes.top_rated }, 
+    { name: 'Popular', path: routes.popular },
+    { name: 'Now Playing', path: routes.Now_Playing },
+    { name: 'Upcoming', path: routes.Upcoming },
+    { name: 'Top Rated', path: routes.top_rated },
 
-      ]
+]
 
 function Header() {
-    
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('left')}>
-               <div> <Link to={routes.home} ><img className={cx('image')} src={logo} alt='logo' /></Link></div>
+                <div> <Link to={routes.home} ><img className={cx('image')} src={logo} alt='logo' /></Link></div>
                 <Type listtype={Movies}>
                     <div className={cx('Movies')}>
                         <span>Movies</span>
@@ -112,9 +112,7 @@ function Header() {
                         <FontAwesomeIcon className={cx("icon")} icon={faBell} />
                     </div>
                 </Tippy>
-                <div>
-                    <img className={cx('avatar')} src={avatar} alt='avatar' />
-                </div>
+                <Avatar />
                 <div>
                     <FontAwesomeIcon className={cx("icon", "search-color")} icon={faMagnifyingGlass} />
                 </div>

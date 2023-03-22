@@ -33,6 +33,7 @@
     // width: 100%;
     padding-left: 4px;
     position: absolute;
+    margin-top: 18px;
     
 }
 .title span:hover{
@@ -46,4 +47,40 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     color: black;
+}
+
+.progress{
+    display: flex;
+    justify-content: left;
+    position: absolute;
+  
+    color: white;
+    margin-left: 10px;
+    
+    // float: left;
+    height: 40px;
+
+    background: black;
+    width: 41px !important;
+    border-radius: 50%;
+    
+    top: 151px;
+    left: -1px;
+
+}
+
+//mobile width <740
+@media only screen and (max-width: 739px) {
+    
+    .container-item{
+        display: inline-block;
+        width: 45%;
+    }
+}
+
+//mt bangr
+@media only screen and (min-width:740px) and (max-width:1024px) {
+    .container-item{
+        width: 23%;
+    }
 }

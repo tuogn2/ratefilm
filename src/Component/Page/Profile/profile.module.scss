@@ -1,0 +1,51 @@
+.banner {
+    height: 500px;
+
+    width: 100%;
+    background: url('./back.jpg') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: -50px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 100px;
+}
+
+.inforuser {
+    color: white;
+    margin-left: 80px;
+}
+
+
+//mobile width <740
+@media only screen and (max-width: 739px) {
+
+    .banner {
+        height: 250px;
+        background-position: center;
+    }
+
+    .container-avatar{
+        display: flex;
+        align-items: center;
+    }
+    .avatar {
+        width: 50px;
+        height: 50px;
+        margin-left: 50px;
+        
+    }
+}
+
+//mt bangr
+@media only screen and (min-width:740px) and (max-width:1024px) {
+    body {
+        background-color: aqua;
+    }
+}

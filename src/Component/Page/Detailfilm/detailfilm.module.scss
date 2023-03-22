@@ -81,10 +81,11 @@
 
 .title {
     margin: 34px 0 0 0;
+    font-size: 45px;
 }
 
 .date {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 200;
     margin: -5px 0 0 0;
 }
@@ -92,7 +93,7 @@
 .tagline {
     font-family: 'Montserrat', sans-serif;
 
-    font-size: 14px;
+    font-size: 15px;
     color: white;
     font-weight: 200;
     margin-top: 15px;
@@ -125,10 +126,13 @@
 
 h3 {
     margin: 10px 0;
+    font-size: 22.5px;
 }
 
 .container-icons {
     margin-top: 10px;
+    position: relative;
+    display: flex;
 }
 
 .icon {
@@ -159,7 +163,7 @@ h3 {
     overflow-x: scroll;
     overflow-y: hidden;
     height: 250px;
-    
+
 
 }
 
@@ -181,14 +185,15 @@ h3 {
 
 
 
-.wrapper-actor{
+.wrapper-actor {
     height: 90%;
     width: 138px;
     margin: 10px;
     border: 1px solid black;
     border-radius: 10px;
 }
-.actor-img{
+
+.actor-img {
     height: 150px;
     width: auto;
     min-width: 130px;
@@ -196,7 +201,95 @@ h3 {
 
 }
 
-.wrapper-actor h3{
+.wrapper-actor h3 {
     margin: 0;
     font-size: 15px;
+}
+
+.ontainer-progress {
+    position: relative;
+    width: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+
+    color: white;
+    margin-left: 10px;
+    // float: left;
+    height: 60px;
+
+    background: black;
+    width: 60px !important;
+    border-radius: 50%;
+    transition: 1s ease-in-out;
+    // top: 151px;
+    // left: -1px;
+    &:hover {
+        height: 65px;
+        width: 65px !important;
+
+    }
+}
+
+.user {
+
+    margin: 4px 5px 0 80px;
+    width: 40px;
+    height: 100%;
+}
+
+//mobile width <740
+@media only screen and (max-width: 739px) {
+    .container{
+        height: 333px;
+    }
+    .container-detail{
+        // margin: 0;
+        padding: 3px;
+    }
+    .infor{
+        // margin: 0;
+
+ 
+    }
+    .poster{
+        height: auto;
+        display: none;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+    .date{
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    h3{
+        font-size: 15px;
+    }
+    .container-icons{
+        // display: none;
+        
+    }
+    .icon{
+        width: 10px;
+        height: 10px;
+    }
+    .tagline,.overviewtitle{
+        font-size: 10px;
+    }
+}
+
+//mt bangr
+@media only screen and (min-width:740px) and (max-width:1024px) {
+    body {
+        background-color: aqua;
+    }
 }

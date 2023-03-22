@@ -2,6 +2,9 @@ import classNames from "classnames/bind";
 import style from './home.module.scss';
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import Search from "./Search";
 
 const cx = classNames.bind(style);
 function Home() {
@@ -25,7 +28,7 @@ function Home() {
         week = true;
     }
 
-
+    const percentage = 66;
 
     let trendingday = cx({ select: day })
     let trendingweek = cx({ select: week })
@@ -35,10 +38,7 @@ function Home() {
         <div className={cx('wrappermedia')} >
             <h1 className={cx('title')}>Welcome.</h1>
             <p className={cx('content')}>Millions of movies, TV shows and people to discover. Explore now.</p>
-            <div className={cx('search')}>
-                <input className={cx('search-focus')} type='text' placeholder="Search for a movie, tv show, person..." />
-                <input className={cx('search-btn')} type='button' value='Search' />
-            </div>
+            <Search/>
         </div>
         <div className={cx('wrapper-trending')}>
             <div className={cx('container-btntrending')}>
@@ -52,11 +52,38 @@ function Home() {
             <div className={cx('wrapper-listfilm')}>
                 {films.map((film, index) => {
                     return (
-                    <Link to={`/movie/popular/${film.id}`}  key={index} className={cx('container-item')} > 
-                        {/* <div className={cx('container-item')} > */}
+                        <Link to={`/movie/popular/${film.id}`} key={index} className={cx('container-item')} >
+                            {/* <div className={cx('container-item')} > */}
                             <div className={cx('container-img')}>
                                 <img className={cx('img')} src={`https://image.tmdb.org/t/p/original${film.poster_path}`} alt={film.title}></img>
                             </div>
+                            <div >
+                                {/* lay chứ từ trên github */}
+                                <CircularProgressbar
+                                    styles={buildStyles({
+                                        // Rotation of path and trail, in number of turns (0-1)
+                                        rotation: 0,
+
+                                        // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                                        strokeLinecap: 'butt',
+
+                                        // Text size
+                                        textSize: '24px',
+
+                                        // How long animation takes to go from one percentage to another, in seconds
+                                        pathTransitionDuration: 0.5,
+
+                                        // Can specify path transition in more detail, or remove it entirely
+                                        // pathTransition: 'none',
+                                        // Colors
+                                        pathColor: film.vote_average > 7 ? 'green' : 'yellow   ',
+                                        textColor: 'white',
+                                        trailColor: '#d6d6d6',
+                                        backgroundColor: '#000000',
+                                    })}
+                                    className={cx('progress')} value={film.vote_average / 0.1} text={`${(film.vote_average / 0.1).toFixed(0)}%`} />
+                            </div>
+
                             <div className={cx('title-film')}>
                                 <span>{film.title || film.name}</span>
                                 <div className={cx('ratefilm')}>
@@ -66,17 +93,17 @@ function Home() {
                                 <p className={cx('dateofilm')}><i>{film.release_date}</i></p>
                             </div>
 
-                        {/* </div> */}
-                     </Link>
+                            {/* </div> */}
+                        </Link>
                     )
                 })}
             </div>
 
         </div>
-        <div>
 
-        </div>
     </div>;
 }
 
 export default Home;
+
+

@@ -31,7 +31,7 @@ function Footer() {
                     <span>12 Nguyễn văn bảo, P4,Gò vấp, Tp.HCM</span>
                 </div>
             </div>
-            <div>
+            <div className={cx('socials')}>
                 <p>
                     Các nền tảng mạng xã hội liên hệ:
                 </p>

@@ -122,20 +122,24 @@
     // padding: 10px;
     width: 100%;
 }
-.addmovie,.addshow{
+
+.addmovie,
+.addshow {
     width: 100%;
     padding: 5px;
     text-align: left;
 
 }
-.addmovie:hover, .addshow:hover{
+
+.addmovie:hover,
+.addshow:hover {
     background-color: #032541;
     color: white;
 
 }
 
 .right-plus::before {
-    align-items: center ;
+    align-items: center;
     content: " ";
     width: 0;
     height: 0;
@@ -144,28 +148,28 @@
     border-bottom: 20px solid white;
     margin-left: 54px;
     margin-top: -19px;
-    
+
 }
 
 
 //notification
-.notification{
+.notification {
     width: 250px;
     padding: 13px;
 }
 
-.notification p{
+.notification p {
     text-align: left;
     font-weight: 300;
 }
 
-.notification p a{
-   color: goldenrod;
-   text-decoration: underline;
+.notification p a {
+    color: goldenrod;
+    text-decoration: underline;
 }
 
 .notification::before {
-    align-items: center ;
+    align-items: center;
     content: " ";
     width: 0;
     height: 0;
@@ -174,6 +178,65 @@
     border-bottom: 20px solid white;
     margin-left: 100px;
     margin-top: -24px;
+
+}
+
+
+
+///;profile
+/// 
+.wrapper-profile :first-child {
+    border-bottom: 1px solid black !important;
+}
+
+.infor {
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    // background-color: aqua;
+    width: 100%;
+    font-weight: 100;
+    padding: 5px 0 5px 10px;
+
+    &:hover {
+        background-color: #032541;
+        color: white;
+        font-weight: 200;
+    }
+
+}
+
+
+//mobile width <740
+@media only screen and (max-width: 739px) {
+    .wrapper{
+        padding-left: 10px;
+    }
+    .image {
+        width: 100px;
+        height: auto;
+    }
+    .TVShow,.More,.icon,.language{
+        display: none;
+    }
+    .avatar{
+        margin-top: 2px;
+    }
     
 }
 
+//mt bangr
+@media only screen and (min-width:740px) and (max-width:1024px) {
+    .TVShow{
+        display: none;
+
+    }
+    .search-color{
+        display: none;
+    }
+    .notification::before {
+       
+        margin-left: 112px;
+    
+    }   
+}

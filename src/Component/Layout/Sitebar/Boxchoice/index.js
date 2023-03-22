@@ -21,9 +21,9 @@ function Boxchoice({ icon, title }) {
         {show && <div className={cx('hiden-box')}>
             <span className={cx('title-hiden-box')}>Sort Results By</span>
             <select className={cx('list-box')} size='1'>
-                <option>Popularity Descending</option>
-                <option>Popularity Ascending</option>
-                <option>Rating Descending</option>
+                <option className={cx('item')}>Popularity Descending</option>
+                <option className={cx('item')}>Popularity Ascending</option>
+                <option className={cx('item')}>Rating Descending</option>
             </select>
         </div>}
     </div>

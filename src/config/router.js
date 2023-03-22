@@ -10,6 +10,7 @@ const routes ={
     Now_Playingid:'/movie/now_playing/:idfilm',
     Upcomingid:'/movie/upcoming/:idfilm',
     top_ratedid:'/movie/top_rated/:idfilm',
+    search:':idfilm'
 
 }
 
