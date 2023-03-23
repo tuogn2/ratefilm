@@ -32,13 +32,13 @@ function Search() {
             placement="bottom-start"
             render={attrs => (
                 <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                    {listfilm.map((film, i = 0) => {
-                        if (i > 5) {
-                            return;
-                        }
-                        i++;
-                        return <Button to={`/movie/popular/${film.id}`} key={film.id}>{film.name}</Button>
-                    })}
+                        {listfilm.map((film,index, i = 0) => {
+                            if (i > 5) {
+                                return null;
+                            }
+                            i++;
+                            return <Button to={`/movie/popular/${film.id}`} key={index}>{film.name}</Button>
+                        })}
 
                 </div>
 

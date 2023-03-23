@@ -17,7 +17,7 @@ const More = [
     { name: 'Leaderboard', path: routes.home },
     { name: 'Support', path: routes.home },
     { name: 'API', path: routes.home },
-]
+] 
 
 const People = [
     { name: 'Popular People', path: routes.popular },
