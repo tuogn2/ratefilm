@@ -7,7 +7,7 @@ function Profile() {
     return <div className={cx('wrapper')}>
         <div className={cx('banner')}>
             <div className={cx('container-avatar')}>
-                <img className={cx('avatar')} src={Avatar}/>
+                <img className={cx('avatar')} alt="avatar" src={Avatar}/>
             </div>
             <div className={cx('inforuser')}>
                 <h2>Đỗ Chí Tường</h2>

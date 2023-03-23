@@ -13,7 +13,7 @@ function Footer() {
         <footer className={cx('container')}>
             <div >
                 <Link  to={routes.home}>
-                    <img className={cx('logo-footer')} src={logo} />
+                    <img className={cx('logo-footer')} alt="logo" src={logo} />
                 </Link>
             </div>
             <div className={cx('infor-contact')}>
@@ -36,9 +36,9 @@ function Footer() {
                     Các nền tảng mạng xã hội liên hệ:
                 </p>
                 <div className={cx('social-network')}>
-                    <a href="https://www.facebook.com/" ><FontAwesomeIcon icon={faFacebookF} className={cx('social-media')} /></a>
-                    <a href="#"><FontAwesomeIcon icon={faTwitter} className={cx('social-media')} /></a>
-                    <a href="#"><FontAwesomeIcon icon={faInstagram} className={cx('social-media')} /></a>
+                    <a href="https://www.facebook.com/" alt='face'><FontAwesomeIcon icon={faFacebookF} className={cx('social-media')} /></a>
+                    <a href="https://twitter.com/?lang=vi" alt='Twitter'><FontAwesomeIcon icon={faTwitter} className={cx('social-media')} /></a>
+                    <a href="https://www.instagram.com/" alt='insgram'><FontAwesomeIcon icon={faInstagram} className={cx('social-media')} /></a>
                 </div>
             </div>
         </footer>);

@@ -16,9 +16,10 @@ function Film() {
         
     }, [userid,numberpage])
     useEffect(()=>{
-        if(numberpage!=1){
+        if(numberpage!==1){
             setnumberpage(1);
         }
+        // eslint-disable-next-line
     },[userid])
     const number =['5','4','3','2','1'];
     return (<>
@@ -28,14 +29,14 @@ function Film() {
                 {
                     number.map((id)=>{
                         let boole = false;
-                        if(id == numberpage){
+                        if(id === numberpage){
                             boole=true;
                         }
                         return (
                             <button key={id} onClick={()=>setnumberpage(id)} className={cx({isselect: boole})}>{id}</button>
                         )
                     }
-                    )
+                    ) 
                 }
                
            </div>

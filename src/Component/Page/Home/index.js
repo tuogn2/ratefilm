@@ -28,7 +28,6 @@ function Home() {
         week = true;
     }
 
-    const percentage = 66;
 
     let trendingday = cx({ select: day })
     let trendingweek = cx({ select: week })
