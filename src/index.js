@@ -4,16 +4,16 @@ import './index.css';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './Component/Globalstyle';
-import { HashRouter } from 'react-router-dom';
+// import { HashRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter basename="/">
+    {/* <HashRouter basename="/"> */}
 
       <GlobalStyle>
         <App />
       </GlobalStyle>
-    </HashRouter>
+    {/* </HashRouter> */}
   </React.StrictMode>
 );
 

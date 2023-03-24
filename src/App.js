@@ -3,9 +3,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { publicRoute } from './router';
 import DefaulLayout from './Component/Layout/DefaulLayout';
 import { Fragment } from 'react';
+import { HashRouter } from 'react-router-dom';
 function App() {
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Routes>
           {publicRoute.map((route, index) => {
@@ -28,7 +30,9 @@ function App() {
         </Routes>
         
       </div>
-    </BrowserRouter>
+    {/* </BrowserRouter> */}
+          
+      </HashRouter>
   );
 }
 
